@@ -103,7 +103,7 @@
 
 ## These algorithms and data structures form the backbone of many computer programs and are essential for understanding and implementing efficient solutions to various computational problems.
 
-`NOTE` - I will also try as much as to leverage the `BIG O Notation`
+## `NOTE` - I will also try as much as to leverage the `BIG O Notation`
 
 
 
