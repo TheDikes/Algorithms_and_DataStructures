@@ -65,7 +65,7 @@
 `Boyer-Moore Algorithm`
 
 
-# Data Structures:
+## Data Structures:
 ### Arrays
 
 ### Linked Lists:
