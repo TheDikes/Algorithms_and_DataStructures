@@ -16,80 +16,90 @@
 
 ### Searching Algorithms:
 
-Linear Search
-Binary Search
-Depth-First Search (DFS)
-Breadth-First Search (BFS)
-Graph Algorithms:
+`Linear Search`
+`Binary Search`
+`Depth-First Search (DFS)`
+`Breadth-First Search (BFS)`
 
-Dijkstra's Algorithm
-Bellman-Ford Algorithm
-Floyd-Warshall Algorithm
-Kruskal's Algorithm (Minimum Spanning Tree)
-Prim's Algorithm (Minimum Spanning Tree)
-Topological Sorting
-Dynamic Programming:
+### Graph Algorithms:
 
-Fibonacci Series
-Longest Common Subsequence
-Knapsack Problem
-Matrix Chain Multiplication
-Shortest Path Problems
-Edit Distance
-Greedy Algorithms:
+`Dijkstra's Algorithm`
+`Bellman-Ford Algorithm`
+`Floyd-Warshall Algorithm`
+`Kruskal's Algorithm (Minimum Spanning Tree)`
+`Prim's Algorithm (Minimum Spanning Tree)`
+`Topological Sorting`
 
-Minimum Spanning Tree
-Job Scheduling
-Huffman Coding
-Dijkstra's Algorithm
-Prim's Algorithm
-Backtracking Algorithms:
+### Dynamic Programming:
 
-N-Queens Problem
-Sudoku Solver
-Hamiltonian Cycle
-Subset Sum
-String Matching Algorithms:
+`Fibonacci Series`
+`Longest Common Subsequence`
+`Knapsack Problem`
+`Matrix Chain Multiplication`
+`Shortest Path Problems`
+`Edit Distance`
 
-Naive String Matching
-Rabin-Karp Algorithm
-Knuth-Morris-Pratt Algorithm
-Boyer-Moore Algorithm
-Data Structures:
-Arrays
+### Greedy Algorithms:
 
-Linked Lists:
+`Minimum Spanning Tree`
+`Job Scheduling`
+`Huffman Coding`
+`Dijkstra's Algorithm`
+`Prim's Algorithm`
 
-Singly Linked Lists
-Doubly Linked Lists
-Circular Linked Lists
-Stacks
+### Backtracking Algorithms:
 
-Queues:
+`N-Queens Problem`
+`Sudoku Solver`
+`Hamiltonian Cycle`
+`Subset Sum`
 
-Linear Queues
-Circular Queues
-Priority Queues
-Trees:
+### String Matching Algorithms:
 
-Binary Trees
-Binary Search Trees (BST)
-AVL Trees
-Red-Black Trees
-B-Trees
-Trie
-Hash Tables
+`Naive String Matching`
+`Rabin-Karp Algorithm`
+`Knuth-Morris-Pratt Algorithm`
+`Boyer-Moore Algorithm`
 
-Graphs:
 
-Directed Graphs
-Undirected Graphs
-Weighted Graphs
-Heaps
+# Data Structures:
+### Arrays
 
-Sets
+### Linked Lists:
 
-Maps
+`Singly Linked Lists`
+`Doubly Linked Lists`
+`Circular Linked Lists`
+
+### Stacks
+
+### Queues:
+
+`Linear Queues`
+`Circular Queues`
+`Priority Queues`
+
+### Trees:
+
+`Binary Trees`
+`Binary Search Trees (BST)`
+`AVL Trees`
+`Red-Black Trees`
+`B-Trees`
+`Trie`
+`Hash Tables`
+
+### Graphs:
+
+`Directed Graphs`
+`Undirected Graphs`
+`Weighted Graphs`
+
+### Heaps
+
+### Sets
+
+### Maps
 
 These algorithms and data structures form the backbone of many computer programs and are essential for understanding and implementing efficient solutions to various computational problems.
 
