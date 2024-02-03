@@ -18,6 +18,9 @@
 
 `Linear Search`
 `Binary Search`
+`Jump search`
+`Interpolation search`
+`Exponential search`
 `Depth-First Search (DFS)`
 `Breadth-First Search (BFS)`
 
