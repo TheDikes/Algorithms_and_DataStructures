@@ -13,6 +13,7 @@
 `Heap Sort`
 `Radix Sort`
 `Counting Sort`
+`Bucket Sort`
 
 ### Searching Algorithms:
 
