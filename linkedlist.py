@@ -34,13 +34,12 @@ class ParkingLot:
     
     def display(self):
         current_parking = self.head
-        nodes_data = [] # initializes an empty array to store node data
         
         while current_parking:
-            nodes_data.append("'" + current_parking.vehicle + "'")
+            print(current_parking.vehicle, end=" -> ")
             current_parking = current_parking.next
 
-        print("[" + ", ".join(nodes_data) + "]")
+        print('end')
 
 
 
