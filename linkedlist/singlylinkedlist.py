@@ -32,6 +32,26 @@ class ParkingLot:
         self.head = new_parking
 
     
+    # Removing a vehicle(parking space from the parking lot)
+    def leave(self, vehicle):
+        current_parking = self.head
+        prev_parking = None
+
+        # Search for the parking space containing the vehicle to leave
+        while current_parking and current_parking.vehicle != vehicle:
+            prev_parking = current_parking
+            current_parking = current_parking.next
+
+        # If the vehicle is found, remove it from the parking lot
+        if current_parking:
+            if prev_parking:
+                prev_parking.next = current_parking.next
+            else:
+                self.head = current_parking.next
+            del current_parking
+
+
+    
     def display(self):
         current_parking = self.head
         
@@ -50,23 +70,5 @@ parking_lot.append("Bike")
 parking_lot.append("Truck")
 
 parking_lot.prepend("Motorcycle")
+parking_lot.leave("Car")
 parking_lot.display()
-
-
-# Removing a vehicle(parking space from the parking lot)
-#    def leave(self, vehicle):
-#         current_parking = self.head
-#         prev_parking = None
-
-#         # Search for the parking space containing the vehicle to leave
-#         while current_parking and current_parking.vehicle != vehicle:
-#             prev_parking = current_parking
-#             current_parking = current_parking.next
-
-#         # If the vehicle is found, remove it from the parking lot
-#         if current_parking:
-#             if prev_parking:
-#                 prev_parking.next = current_parking.next
-#             else:
-#                 self.head = current_parking.next
-#             del current_parking
