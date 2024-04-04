@@ -31,6 +31,35 @@ class Train:
         new_carriage.next = self.head
         self.head = new_carriage
 
+
+    def insert_at_position(self, position, cargo):
+        if position < 0:
+            print ("Invalid position")
+        
+        new_carriage = TrainCar(cargo)
+
+        if position == 0:
+            new_carriage.next = self.head
+            self.head = new_carriage
+            return
+        
+        # Traversing down the list
+        current = self.head
+        
+        count = 0
+        while current:
+            if count == position - 1: # This checks if the current position is one less than the desired inserted position.
+                new_carriage.next = current.next
+                current.next = new_carriage
+                break
+
+            current = current.next
+            count +=1
+
+        else:
+            print("Position out of range.")
+
+
     
     # Removing a cargo (carriage from the train)
     def detach(self, cargo):
@@ -65,10 +94,16 @@ class Train:
 
 
 train = Train()
-train.append("Car 1")
-train.append("Car 2")
-train.append("Car 3")
+train.append("Passenger Car ")
+train.append("Dining Car")
+train.append("Swimming Car")
 
-train.prepend("Car 0")
-# train.detach("Car 2")
+train.prepend("Pilot Car")
+# train.detach("Kitchen Car")
+print("Original carriage:")
+train.display()
+
+train.insert_at_position(2, "Kitchen Car")
+
+print("\nnew linked carriage after insertion:")
 train.display()
