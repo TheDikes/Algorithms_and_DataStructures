@@ -1,74 +1,74 @@
-class ParkingSpace:
-    def __init__(self, vehicle):
-        self.vehicle = vehicle #the data part of the node (parking space)
-        self.next = None # reference to the next node(parking space) in the linked list(Parking lot)
+class TrainCar:
+    def __init__(self, cargo):
+        self.cargo = cargo # the data part of the node (train car)
+        self.next = None # Reference to the next node(train car) in the linked list (Train)
 
 
-class ParkingLot:
+class Train:
     def __init__(self):
-        self.head = None #initialize an empty linked list (parking lot)
+        self.head = None #initialize an empty linked list (train)
 
-    def append(self, vehicle):
-        new_parking = ParkingSpace(vehicle) # Create a new parking space with the given vehicle data
+    def append(self, cargo):
+        new_carriage = TrainCar(cargo) # Create a new carriage space with the given cargo data
 
-        #if the linkedlist(parking lot) is empty, make the new parking space the head of the list(first parking in the parking lot)
+        #if the linkedlist(Train) is empty with no cargo, make the new carriage space the head of the list(first cargo on the Train)
         if self.head is None:
-            self.head = new_parking
+            self.head = new_carriage
             return
         
-        # Traverse the list(lot) to find the last parking space
-        last_parking = self.head
-        while last_parking.next:
-            last_parking = last_parking.next
+        # Traverse the list(Train) to find the last carriage 
+        last_carriage = self.head
+        while last_carriage.next:
+            last_carriage = last_carriage.next
 
-        # Park the new vehicle in the last parking space    
-        last_parking.next = new_parking
+        # Park the new carriage in the last carriage space    
+        last_carriage.next = new_carriage 
 
 
-    def prepend(self, vehicle):
-        new_parking = ParkingSpace(vehicle)
+    def prepend(self, cargo):
+        new_carriage = TrainCar(cargo)
 
-        new_parking.next = self.head
-        self.head = new_parking
+        new_carriage.next = self.head
+        self.head = new_carriage
 
     
-    # Removing a vehicle(parking space from the parking lot)
-    def leave(self, vehicle):
-        current_parking = self.head
-        prev_parking = None
+    # Removing a cargo (carriage from the train)
+    def detach(self, cargo):
+        current_carriage = self.head
+        prev_carriage = None
 
-        # Search for the parking space containing the vehicle to leave
-        while current_parking and current_parking.vehicle != vehicle:
-            prev_parking = current_parking
-            current_parking = current_parking.next
+        # Search for the carriage space containing the cargo to remove
+        while current_carriage and current_carriage.cargo != cargo:
+            prev_carriage = current_carriage
+            current_carriage = current_carriage.next
 
-        # If the vehicle is found, remove it from the parking lot
-        if current_parking:
-            if prev_parking:
-                prev_parking.next = current_parking.next
+        # If the cargo is found, remove it from the Train
+        if current_carriage:
+            if prev_carriage:
+                prev_carriage.next = current_carriage.next
             else:
-                self.head = current_parking.next
-            del current_parking
+                self.head = current_carriage.next
+            del current_carriage
 
 
     
     def display(self):
-        current_parking = self.head
+        current_carriage = self.head
         
-        while current_parking:
-            print(current_parking.vehicle, end=" -> ")
-            current_parking = current_parking.next
+        while current_carriage:
+            print(current_carriage.cargo, end=" -> ")
+            current_carriage = current_carriage.next
 
         print('end')
 
 
 
 
-parking_lot = ParkingLot()
-parking_lot.append("Car")
-parking_lot.append("Bike")
-parking_lot.append("Truck")
+train = Train()
+train.append("Car 1")
+train.append("Car 2")
+train.append("Car 3")
 
-parking_lot.prepend("Motorcycle")
-parking_lot.leave("Car")
-parking_lot.display()
+train.prepend("Car 0")
+# train.detach("Car 2")
+train.display()
