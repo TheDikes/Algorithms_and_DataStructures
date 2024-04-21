@@ -103,7 +103,7 @@ train.prepend("Pilot Car")
 print("Original carriage:")
 train.display()
 
-train.insert_at_position(2, "Kitchen Car")
+train.insert_at_position(3, "Kitchen Car")
 
 print("\nnew linked carriage after insertion:")
 train.display()
